@@ -8,6 +8,7 @@
     <string name="age_label">Age:</string>
     <string name="info_label">Contact Info</string>
     <string name="address_button">Address</string>
+    <string name="upload_button">Pick an image</string>
 
     <string name="street_label">Street:</string>
     <string name="ext_number_label">Ext. Number.:</string>
