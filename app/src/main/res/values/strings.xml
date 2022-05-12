@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">R2DevProsProject</string>
-    <string name="name_label">Name:</string>
-    <string name="avatar_description_image">Avatar image</string>
+    <string name="name_label">Nombre:</string>
+    <string name="avatar_description_image">Imagen de Avatar</string>
     <string name="lastname_label">Apellido:</string>
     <string name="gender_label">Sexo:</string>
     <string name="age_label">Edad:</string>
