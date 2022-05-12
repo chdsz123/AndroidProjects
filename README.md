@@ -1,7 +1,7 @@
 # R2DevPros Project
 ## _The Last Contact App, Ever_
 
-[![N|Solid](https://definicion.de/wp-content/uploads/2015/10/android.png)](https://www.android.com/)
+[![N|Solid](https://www.freepnglogos.com/uploads/android-logo-png/android-logo-integrations-support-web-development-services-14.png)](https://www.android.com/)
 
 R2DevPros Project is a mobile, offline-storage compatible android app.
 
