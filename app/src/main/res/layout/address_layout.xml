@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/ivAvatar"
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:layout_marginTop="50dp"
+                    android:contentDescription="@string/avatar_description_image"
+                    android:src="@mipmap/avatar2_foreground"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <View
+                    android:id="@+id/divider"
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="150dp"
+                    android:alpha="0"
+                    android:background="#FFFFFF"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvName"
+                    style="@style/Title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/ivAvatar"
+                    tools:text="Christian Daniel Salazar Zamora"/>
+
+                <TextView
+                    android:id="@+id/tvStreet"
+                    style="@style/Label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/street_label"
+                    app:layout_constraintEnd_toStartOf="@id/divider"
+                    app:layout_constraintTop_toBottomOf="@id/tvName" />
+
+                <EditText
+                    android:id="@+id/etStreet"
+                    style="@style/Box"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:importantForAutofill="no"
+                    android:inputType="text"
+                    app:layout_constraintTop_toTopOf="@id/tvStreet"
+                    app:layout_constraintBottom_toBottomOf="@id/tvStreet"
+                    app:layout_constraintStart_toEndOf="@id/divider"
+                    tools:ignore="LabelFor" />
+
+                <TextView
+                    android:id="@+id/tvExtNumber"
+                    style="@style/Label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/ext_number_label"
+                    app:layout_constraintEnd_toStartOf="@id/divider"
+                    app:layout_constraintTop_toBottomOf="@id/tvStreet" />
+
+                <EditText
+                    android:id="@+id/etExtNumber"
+                    style="@style/Box"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:importantForAutofill="no"
+                    android:inputType="number"
+                    app:layout_constraintTop_toTopOf="@id/tvExtNumber"
+                    app:layout_constraintBottom_toBottomOf="@id/tvExtNumber"
+                    app:layout_constraintStart_toEndOf="@id/divider"
+                    tools:ignore="LabelFor" />
+
+                <TextView
+                    android:id="@+id/tvIntNumber"
+                    style="@style/Label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/int_number_label"
+                    app:layout_constraintEnd_toStartOf="@id/divider"
+                    app:layout_constraintTop_toBottomOf="@id/tvExtNumber" />
+
+                <EditText
+                    android:id="@+id/etIntNumber"
+                    style="@style/Box"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:importantForAutofill="no"
+                    android:inputType="number"
+                    app:layout_constraintTop_toTopOf="@id/tvIntNumber"
+                    app:layout_constraintBottom_toBottomOf="@id/tvIntNumber"
+                    app:layout_constraintStart_toEndOf="@id/divider"
+                    tools:ignore="LabelFor" />
+
+                <TextView
+                    android:id="@+id/tvSuburb"
+                    style="@style/Label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/suburb_label"
+                    app:layout_constraintEnd_toStartOf="@id/divider"
+                    app:layout_constraintTop_toBottomOf="@id/tvIntNumber" />
+
+                <EditText
+                    android:id="@+id/etSuburb"
+                    style="@style/Box"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:importantForAutofill="no"
+                    android:inputType="number"
+                    app:layout_constraintTop_toTopOf="@id/tvSuburb"
+                    app:layout_constraintBottom_toBottomOf="@id/tvSuburb"
+                    app:layout_constraintStart_toEndOf="@id/divider"
+                    tools:ignore="LabelFor" />
+
+                <TextView
+                    android:id="@+id/tvCity"
+                    style="@style/Label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/city_label"
+                    app:layout_constraintEnd_toStartOf="@id/divider"
+                    app:layout_constraintTop_toBottomOf="@id/tvSuburb" />
+
+                <EditText
+                    android:id="@+id/etCity"
+                    style="@style/Box"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:importantForAutofill="no"
+                    android:inputType="text"
+                    app:layout_constraintTop_toTopOf="@id/tvCity"
+                    app:layout_constraintBottom_toBottomOf="@id/tvCity"
+                    app:layout_constraintStart_toEndOf="@id/divider"
+                    tools:ignore="LabelFor" />
+
+                <TextView
+                    android:id="@+id/tvState"
+                    style="@style/Label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/state_label"
+                    app:layout_constraintEnd_toStartOf="@id/divider"
+                    app:layout_constraintTop_toBottomOf="@id/tvCity" />
+
+                <EditText
+                    android:id="@+id/etState"
+                    style="@style/Box"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:importantForAutofill="no"
+                    android:inputType="text"
+                    app:layout_constraintTop_toTopOf="@id/tvState"
+                    app:layout_constraintBottom_toBottomOf="@id/tvState"
+                    app:layout_constraintStart_toEndOf="@id/divider"
+                    tools:ignore="LabelFor" />
+
+                <TextView
+                    android:id="@+id/tvCountry"
+                    style="@style/Label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/country_label"
+                    app:layout_constraintEnd_toStartOf="@id/divider"
+                    app:layout_constraintTop_toBottomOf="@id/tvState" />
+
+                <EditText
+                    android:id="@+id/etCountry"
+                    style="@style/Box"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:importantForAutofill="no"
+                    android:inputType="text"
+                    app:layout_constraintTop_toTopOf="@id/tvCountry"
+                    app:layout_constraintBottom_toBottomOf="@id/tvCountry"
+                    app:layout_constraintStart_toEndOf="@id/divider"
+                    tools:ignore="LabelFor" />
+
+                <TextView
+                    android:id="@+id/tvZipCode"
+                    style="@style/Label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/zip_code_label"
+                    app:layout_constraintEnd_toStartOf="@id/divider"
+                    app:layout_constraintTop_toBottomOf="@id/tvCountry" />
+
+                <EditText
+                    android:id="@+id/etZipCode"
+                    style="@style/Box"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:importantForAutofill="no"
+                    android:inputType="number"
+                    android:maxLength="5"
+                    app:layout_constraintTop_toTopOf="@id/tvZipCode"
+                    app:layout_constraintBottom_toBottomOf="@id/tvZipCode"
+                    app:layout_constraintStart_toEndOf="@id/divider"
+                    tools:ignore="LabelFor" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
