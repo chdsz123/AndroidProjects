@@ -1,16 +1,17 @@
 package com.example.r2devprosproject
 
-import android.R.attr
 import android.content.Intent
-import android.net.Uri
+import android.content.res.Configuration
+import android.graphics.Bitmap
+import android.graphics.drawable.BitmapDrawable
 import android.os.Bundle
+import android.os.PersistableBundle
 import android.provider.MediaStore
-import android.widget.ImageView
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.net.toUri
 import com.example.r2devprosproject.databinding.ActivityMainBinding
 import timber.log.Timber
-
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
@@ -19,9 +20,18 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         Timber.d("MainActivity_TAG: onCreate: ")
         super.onCreate(savedInstanceState)
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
-        setBinding()
         bindViews()
+    }
+
+    override fun onConfigurationChanged(newConfig: Configuration) {
+        Timber.d("MainActivity_TAG: onConfigurationChanged: ")
+        super.onConfigurationChanged(newConfig)
+
+        Toast.makeText(this, "Image: $image", Toast.LENGTH_SHORT).show()
+        loadImage()
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
@@ -32,14 +42,10 @@ class MainActivity : AppCompatActivity() {
             // action cancelled
         }
         if (resultCode == RESULT_OK) {
+            Timber.d("MainActivity_TAG: onActivityResult: IMAGE: $image")
             image = data?.data.toString()
-            binding.ivAvatar.setImageBitmap(MediaStore.Images.Media.getBitmap(this.contentResolver, image.toUri()))
+            loadImage()
         }
-    }
-
-    private fun setBinding() {
-        binding = ActivityMainBinding.inflate(layoutInflater)
-        setContentView(binding.root)
     }
 
     private fun bindViews() {
@@ -59,10 +65,17 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this@MainActivity, UserAddressLayoutActivity::class.java).apply {
                 putExtras(Bundle().apply {
                     putString(CONTACT_PHOTO, image)
-                    putString(CONTACT_NAME,"${binding.etName.text} ${binding.etLastName.text}")
+                    putString(CONTACT_NAME, "${binding.etName.text} ${binding.etLastName.text}")
                 })
             }
             startActivity(intent)
+        }
+    }
+
+    private fun loadImage() {
+        Timber.d("MainActivity_TAG: loadInfo: ")
+        if (image.isNotEmpty()) {
+            binding.ivAvatar.setImageBitmap(MediaStore.Images.Media.getBitmap(this.contentResolver, image.toUri()))
         }
     }
 }

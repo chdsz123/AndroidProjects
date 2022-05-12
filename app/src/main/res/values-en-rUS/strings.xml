@@ -17,5 +17,5 @@
     <string name="city_label">City:</string>
     <string name="state_label">State:</string>
     <string name="country_label">Country:</string>
-    <string name="zip_code_label">ZIP/Post Code:</string>
+    <string name="zip_code_label">ZIP Code:</string>
 </resources>
