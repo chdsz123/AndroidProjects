@@ -1,9 +1,10 @@
 # R2DevPros Project
 ## _The Last Contact App, Ever_
 <p align="center">
-  <img width="200" src="https://commons.wikimedia.org/wiki/File:Android_logo_2019_(stacked).svg" alt="Android logo" url="www.android.com">
-</p>
 
+  <img width="200" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Android_robot.svg/1022px-Android_robot.svg.png" alt="ANDROID logo">
+
+</p>
 R2DevPros Project is a mobile, offline-storage compatible android app.
 
 - ✨Magic ✨
